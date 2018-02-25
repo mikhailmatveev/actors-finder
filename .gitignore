@@ -1,0 +1,6 @@
+.phalcon/
+build/
+cache/
+node_modules/
+package-lock.json
+*.log
