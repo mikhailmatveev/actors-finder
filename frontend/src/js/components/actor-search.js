@@ -14,7 +14,7 @@ module.exports.ActorSearch = Vue.component('actor-search', {
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading">{{actor.name}}</h4>
-                    <p v-if="hasAliases(actor)">{{renderAliases(actor)}}</p>
+                    <p v-if="hasAliases(actor)">{{getAliases(actor)}}</p>
                 </div>
             </li>
         </ul>
@@ -55,7 +55,7 @@ module.exports.ActorSearch = Vue.component('actor-search', {
                 this.processData(response.data);
             });
         },
-        renderAliases(actor) {
+        getAliases(actor) {
             if (this.hasAliases(actor)) {
                 return actor.aliases.join(', ');
             }
