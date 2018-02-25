@@ -1,0 +1,102 @@
+[v-cloak] {
+    display: none;
+}
+
+main {
+    padding-top: 70px;
+}
+
+form {
+    margin-bottom: 15px;
+}
+
+.card .img-wrapper {
+    margin-bottom: 10px;
+}
+
+.card .card-body ul {
+    padding: 0;
+    list-style: none;
+}
+
+.card .card-body h4 {
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.card .card-body li {
+    margin: 0 0 5px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px #eee solid;
+}
+
+.card .card-body li span {
+    display: block;
+}
+
+.card .card-body li>span {
+    margin: 0 0 3px 0;
+    font-size: .85em;
+}
+
+.card .card-body li>span+span {
+    margin: 0;
+    font-size: 1em;
+}
+
+.card .card-body .links li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media (min-width: 400px) {
+    .card .img-wrapper,
+    .card .card-body {
+        float: left;
+    }
+    .card .img-wrapper {
+        width: 100%;
+        max-width: 30%;
+    }
+    .card .card-body {
+        padding-left: 15px;
+        width: 100%;
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .card .img-wrapper {
+        width: 100%;
+        max-width: 20%;
+    }
+    .card .card-body {
+        padding-left: 15px;
+        width: 100%;
+        max-width: 80%;
+    }
+}
+
+.media {
+    margin-top: 5px;
+}
+
+.media img {
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.media .media-body {
+    vertical-align: middle;
+}
+
+.media .media-body h4 {
+    margin-bottom: 1px;
+}
+
+.media .media-body p {
+    margin-bottom: 0;
+    font-size: .85em;
+    color: #999;
+}
