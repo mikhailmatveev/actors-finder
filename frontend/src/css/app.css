@@ -14,6 +14,10 @@ form {
     margin-bottom: 10px;
 }
 
+.card .img-wrapper > img {
+    width: 100%;
+}
+
 .card .card-body ul {
     padding: 0;
     list-style: none;
