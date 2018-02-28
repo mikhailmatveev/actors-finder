@@ -10,11 +10,19 @@ form {
     margin-bottom: 15px;
 }
 
-.card .img-wrapper {
+.card .card-body:before,
+.card .card-body:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.card .avatar,
+.card .info {
     margin-bottom: 10px;
 }
 
-.card .img-wrapper > img {
+.card .avatar > img {
     width: 100%;
 }
 
@@ -23,56 +31,56 @@ form {
     list-style: none;
 }
 
-.card .card-body h4 {
+.card .card-body .info h4 {
     margin-top: 0;
     font-weight: 700;
 }
 
-.card .card-body li {
+.card .card-body .info li {
     margin: 0 0 5px 0;
     padding: 0 0 5px 0;
     border-bottom: 1px #eee solid;
 }
 
-.card .card-body li span {
+.card .card-body .info li span {
     display: block;
 }
 
-.card .card-body li > span {
+.card .card-body .info li > span {
     margin: 0 0 3px 0;
     font-size: .85em;
 }
 
-.card .card-body li > span + span {
+.card .card-body .info li > span + span {
     margin: 0;
     font-size: 1em;
 }
 
-.card .card-body .links li {
+.card .card-body .info li li {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
 @media (min-width: 400px) {
-    .card .img-wrapper,
-    .card .card-body {
+    .card .avatar,
+    .card .info {
         float: left;
     }
-    .card .img-wrapper {
+    .card .avatar {
         width: 30%;
     }
-    .card .card-body {
+    .card .info {
         padding-left: 15px;
         width: 70%;
     }
 }
 
 @media (min-width: 768px) {
-    .card .img-wrapper {
+    .card .avatar {
         width: 20%;
     }
-    .card .card-body {
+    .card .info {
         width: 80%;
     }
 }
