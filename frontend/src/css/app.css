@@ -38,12 +38,12 @@ form {
     display: block;
 }
 
-.card .card-body li>span {
+.card .card-body li > span {
     margin: 0 0 3px 0;
     font-size: .85em;
 }
 
-.card .card-body li>span+span {
+.card .card-body li > span + span {
     margin: 0;
     font-size: 1em;
 }
