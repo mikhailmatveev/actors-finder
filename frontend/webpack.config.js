@@ -1,5 +1,7 @@
 'use strict';
 
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
 let webpack = require('webpack'),
     config = {
         context: `${__dirname}/src/js/`,
@@ -10,14 +12,18 @@ let webpack = require('webpack'),
                 query: {
                     presets: [
                         'env'
-                    ]
+                    ],
+                    comments: false,
                 },
                 test: /\.js$/
+            }, {
+                test: /\.vue$/,
+                loader: 'vue-loader'
             }]
         },
         plugins: [
             new webpack.NoEmitOnErrorsPlugin(),
-            new webpack.optimize.UglifyJsPlugin()
+            new UglifyJSPlugin()
         ],
         devtool: 'source-map'
     };

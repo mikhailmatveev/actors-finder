@@ -1,11 +1,9 @@
-import axios from 'axios';
-
-export default Vue.component('actor-info', {
-    template: `<div class="component-wrapper">
+<template>
+    <div class="component-wrapper">
         <div class="card">
             <div class="card-body">
                 <div class="avatar">
-                    <img :src="actor.avatars[0]" :alt="actor.name" class="img-responsive img-thumbnail"/>
+                    <img :src="actor.avatars[0]" :alt="actor.name" class="img-responsive img-thumbnail" />
                 </div>
                 <div class="info">
                     <h4>{{actor.name}}</h4>
@@ -37,63 +35,9 @@ export default Vue.component('actor-info', {
                 </div>
             </div>
         </div>
-    </div>`,
-    components: {
-        color: resolve => { require(['./color'], resolve); }
-    },
-    created() {
-        this.doRequest(this.$route.params.id);
-    },
-    data() {
-        return {
-            actor: {
-                aliases: [],
-                avatars: [],
-                birthDate: '',
-                birthPlace: '',
-                status: '',
-                color: '',
-                country: '',
-                height: 0,
-                id: 0,
-                links: [],
-                name: ''
-            }
-        };
-    },
-    methods: {
-        doRequest(id) {
-            axios.get(`/api/actor/${id}`).then(response => {
-                var data = response.data;
-                // Placeholder for image
-                if (data.avatars.length === 0) {
-                    data.avatars.push('../../img/camera.svg');
-                }
-                this.actor = Object.assign({}, this.actor, data);
-            });
-        },
-        hasAliases() {
-            return this.actor.aliases.length > 0;
-        },
-        hasLinks() {
-            return this.actor.links.length > 0;
-        },
-        getAliases() {
-            if (this.hasAliases()) {
-                return this.actor.aliases.join(', ');
-            }
-            return '';
-        },
-        getLinks() {
-            if (this.hasLinks()) {
-                return this.actor.links.join(', ');
-            }
-            return '';
-        }
-    },
-    watch: {
-        $route(to, from) {
-            this.doRequest(to.params.id);
-        }
-    }
-});
+    </div>
+</template>
+
+<script src="./actor-info.js"></script>
+
+<style src="./actor-info.css" scoped></style>

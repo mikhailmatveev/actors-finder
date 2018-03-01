@@ -1,0 +1,22 @@
+.media {
+    margin-top: 5px;
+}
+
+.media img {
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.media .media-body {
+    vertical-align: middle;
+}
+
+.media .media-body h4 {
+    margin-bottom: 1px;
+}
+
+.media .media-body p {
+    margin-bottom: 0;
+    font-size: .85em;
+    color: #999;
+}

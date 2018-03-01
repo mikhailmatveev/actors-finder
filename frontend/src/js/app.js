@@ -1,10 +1,10 @@
 const router = new VueRouter({
     routes: [{
         path: '/',
-        component: resolve => { require(['./components/actor-search'], resolve); }
+        component: resolve => { require(['../../components/actor-search/actor-search.vue'], resolve); }
     }, {
         path: '/actor/:id',
-        component: resolve => { require(['./components/actor-info'], resolve); }
+        component: resolve => { require(['../../components/actor-info/actor-info.vue'], resolve); }
     }, {
         path: '/404',
         name: '404',
