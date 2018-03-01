@@ -25,7 +25,7 @@ module.exports.ActorInfo = Vue.component('actor-info', {
                         <li><span class="text-muted">Рост</span><span>{{actor.height}}</span></li>
                         <li v-if="actor.color">
                             <span class="text-muted">Цвет глаз</span>
-                            <span>{{actor.color}}</span>
+                            <color :color="actor.color"></color>
                         </li>
                         <li v-if="hasLinks()">
                             <span class="text-muted">Страницы</span>
@@ -38,6 +38,9 @@ module.exports.ActorInfo = Vue.component('actor-info', {
             </div>
         </div>
     </div>`,
+    components: {
+        color: resolve => { require(['./color'], resolve); }
+    },
     created() {
         this.doRequest(this.$route.params.id);
     },
