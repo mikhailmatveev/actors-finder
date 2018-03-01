@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-module.exports.ActorSearch = Vue.component('actor-search', {
+export default Vue.component('actor-search', {
     template: `<div class="component-wrapper">
         <form>
             <input v-model="q" v-on:keyup="keyUp" type="text" class="form-control" placeholder="Кого искать?" aria-label="Кого искать?">

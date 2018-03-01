@@ -1,19 +1,10 @@
-import ActorInfo from './components/actor-info';
-import ActorSearch from './components/actor-search';
-
 const router = new VueRouter({
     routes: [{
         path: '/',
-        components: {
-            default: {
-                template: '<actor-search></actor-search>'
-            }
-        }
+        component: resolve => { require(['./components/actor-search'], resolve); }
     }, {
         path: '/actor/:id',
-        component: {
-            template: '<actor-info></actor-info>'
-        }
+        component: resolve => { require(['./components/actor-info'], resolve); }
     }, {
         path: '/404',
         name: '404',

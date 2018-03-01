@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-module.exports.ActorInfo = Vue.component('actor-info', {
+export default Vue.component('actor-info', {
     template: `<div class="component-wrapper">
         <div class="card">
             <div class="card-body">
