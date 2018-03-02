@@ -29,11 +29,7 @@ export default {
             });
         },
         keyUp() {
-            axios.get('/api/actors', {
-                params: {
-                    q: this.q
-                }
-            }).then(response => {
+            axios.get('/api/actors', { params: { q: this.q } }).then(response => {
                 this.processData(response.data);
             });
         },
