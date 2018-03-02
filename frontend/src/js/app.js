@@ -24,5 +24,5 @@ new Vue({
             path: '*',
             redirect: '404'
         }]
-    });
+    })
 });
