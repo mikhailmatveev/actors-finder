@@ -1,7 +1,7 @@
 .card .card-body .info li > span + span.color {
     display: inline-block;
-    width: 1.2em;
-    height: 1.2em;
+    width: 16px;
+    height: 16px;
     vertical-align: middle;
     border-radius: 50%;
 }
