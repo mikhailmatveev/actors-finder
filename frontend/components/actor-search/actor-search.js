@@ -27,7 +27,7 @@ export default {
             });
         },
         keyUp() {
-            this.$http.get('/api/actors', { params: { q: this.q } }).then(response => {
+            this.$http.get(`/api/actors?q=${this.q}`).then(response => {
                 this.processData(response.data);
             });
         },
