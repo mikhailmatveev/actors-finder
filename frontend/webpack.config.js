@@ -37,6 +37,12 @@ module.exports = [
             path: `${__dirname}/build/js`,
             publicPath: '/build/js/',
             filename: 'app.bundle.js'
+        },
+        resolve: {
+            extensions: ['.js', '.vue'],
+            alias: {
+                vue: 'vue/dist/vue.common.js'
+            }
         }
     })
 ];

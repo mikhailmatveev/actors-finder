@@ -1,3 +1,7 @@
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+import VueRouter from 'vue-router';
+
 const router = new VueRouter({
     routes: [{
         path: '/',
@@ -16,6 +20,9 @@ const router = new VueRouter({
         redirect: '404'
     }]
 });
+
+Vue.use(VueResource);
+Vue.use(VueRouter);
 
 new Vue({
     el: '#app',
