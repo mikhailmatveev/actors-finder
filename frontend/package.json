@@ -18,10 +18,10 @@
   "author": "Mikhail Matveev <mikhailmatveev.tmb@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "vue": "^2.5.13",
+    "vue-resource": "^1.4.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

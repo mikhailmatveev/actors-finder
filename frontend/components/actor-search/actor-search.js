@@ -1,8 +1,6 @@
-import axios from 'axios';
-
 export default {
     created() {
-        axios.get('/api/actors').then(response => {
+        this.$http.get('/api/actors').then(response => {
             this.processData(response.data);
         });
     },
@@ -29,7 +27,7 @@ export default {
             });
         },
         keyUp() {
-            axios.get('/api/actors', { params: { q: this.q } }).then(response => {
+            this.$http.get('/api/actors', { params: { q: this.q } }).then(response => {
                 this.processData(response.data);
             });
         },

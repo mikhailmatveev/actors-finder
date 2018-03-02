@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export default {
     components: {
         color: resolve => { require(['../color/color.vue'], resolve); }
@@ -26,7 +24,7 @@ export default {
     },
     methods: {
         doRequest(id) {
-            axios.get(`/api/actor/${id}`).then(response => {
+            this.$http.get(`/api/actor/${id}`).then(response => {
                 var data = response.data;
                 // Placeholder for image
                 if (data.avatars.length === 0) {
